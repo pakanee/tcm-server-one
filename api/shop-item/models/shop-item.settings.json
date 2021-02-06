@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_items",
+  "info": {
+    "name": "ShopItem",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "qty": {
+      "default": 0,
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0
+    },
+    "item": {
+      "model": "item",
+      "via": "shop_items"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "shops": {
+      "collection": "shop",
+      "via": "shop_item"
+    }
+  }
+}

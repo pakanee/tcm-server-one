@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_types",
+  "info": {
+    "name": "ShopType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

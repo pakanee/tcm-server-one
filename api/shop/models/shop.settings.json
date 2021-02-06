@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "name": "Shop",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "status": {
+      "type": "boolean",
+      "default": false
+    },
+    "branch": {
+      "model": "branch"
+    },
+    "shop_type": {
+      "model": "shop-type"
+    },
+    "shop_item": {
+      "via": "shops",
+      "model": "shop-item"
+    }
+  }
+}

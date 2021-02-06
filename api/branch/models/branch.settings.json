@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "branches",
+  "info": {
+    "name": "Branch"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true
+    },
+    "status": {
+      "type": "boolean",
+      "default": true
+    },
+    "activedAt": {
+      "type": "datetime"
+    }
+  }
+}
